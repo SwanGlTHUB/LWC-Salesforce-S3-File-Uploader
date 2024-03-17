@@ -98,9 +98,7 @@ In this guide, we use `https://creative-wolf-4dpoz7-dev-ed.lightning.force.com` 
     ]
 }
 ```
-### Salesforce Setup
-
-## Configuring Named and External Credentials
+## Salesforce Setup
 
 ### Step 1: Setup Named Credentials
 
@@ -129,7 +127,7 @@ In this guide, we use `https://creative-wolf-4dpoz7-dev-ed.lightning.force.com` 
    - For the role ARN, input the ARN of the role created during the AWS setup process (e.g., `arn:aws:iam::[myAccountIdDontWantToExpose]:role/SalesforceAmazonFilesRole`). Replace `[myAccountIdDontWantToExpose]` with your actual AWS account ID.
    - Click `Save` to finalize the configuration.
 
-## Step 3: Configure Custom Setting for Amazon Files
+### Step 3: Configure Custom Setting for Amazon Files
 
 1. **Access Custom Settings**:
     - In Salesforce, navigate to `Setup`.
@@ -148,7 +146,7 @@ In this guide, we use `https://creative-wolf-4dpoz7-dev-ed.lightning.force.com` 
     - After entering all the required details, click `Save` to store the custom setting.
 
 
-## Step 4: Assign Permission Sets for Amazon Files Functionality
+### Step 4: Assign Permission Sets for Amazon Files Functionality
 
 Salesforce permission sets are designed to grant users access to various functionalities without changing their profiles. For our AWS S3 integration, two specific permission sets are provided:
 
