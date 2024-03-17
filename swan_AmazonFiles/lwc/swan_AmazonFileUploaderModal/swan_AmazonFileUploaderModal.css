@@ -1,0 +1,235 @@
+body {
+	font-family: sans-serif;
+}
+
+.slds-modal__container {
+	max-width: 50rem;
+}
+
+.slds-modal__content {
+	scrollbar-gutter: stable both-edges;
+}
+
+.modal-content {
+	border-top-left-radius: 8px 8px !important;
+	border-top-right-radius: 8px 8px !important;
+}
+
+.modal-title {
+	font-family: sans-serif;
+	font-size: 18px;
+	text-align: center;
+}
+
+.button-finish {
+	width: 90% !important;
+	color: black !important;
+	border-color: transparent !important;
+	box-shadow:
+		0 1px 3px rgba(93, 133, 189, 0.85),
+		0 1px 4px rgba(93, 133, 189, 0.85) !important;
+}
+
+/* Backdrop styles */
+.slds-backdrop {
+	animation: fadeIn 0.3s ease-out;
+}
+
+.slds-modal__footer {
+	background-color: white;
+	padding-bottom: 25px;
+	border: 0px;
+	border-top-left-radius: 0px 0px !important;
+	border-top-right-radius: 0px 0px !important;
+	border-bottom-left-radius: 8px 8px !important;
+	border-bottom-right-radius: 8px 8px !important;
+
+	display: flex;
+	justify-content: space-around;
+}
+
+/* Modal animation for appearing */
+.slds-modal {
+	animation: scaleFadeIn 0.3s ease-out;
+}
+
+.file-element-container {
+	width: 100%;
+}
+
+.files-container {
+	padding-top: 14px;
+}
+
+.file-wrapper {
+	padding: 8px;
+}
+
+.slds-button {
+	width: 100%;
+}
+
+.custom-button {
+	box-shadow:
+		0 1px 3px rgb(68, 153, 111, 0.85),
+		0 1px 4px rgb(68, 153, 111, 0.85);
+	transition: box-shadow 0.3s ease-in-out;
+
+	font-family: sans-serif;
+	font-size: 14px;
+	width: 45%;
+	background-color: white;
+	color: red;
+	border: 1px solid black;
+	border-radius: 20px;
+	padding: 10px 16px;
+	line-height: 20px;
+}
+
+.custom-button:disabled {
+	background-color: white; /* Button background */
+	color: #ccc; /* Light gray text color to indicate it's disabled */
+	border: 1px solid #eee; /* Light border to keep the button defined */
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow to indicate disabled state */
+	cursor: not-allowed; /* Change cursor to indicate the button is not clickable */
+	opacity: 0.6; /* Make the button look faded to further indicate it is disabled */
+	height: 0px;
+	padding: 0px;
+	animation: collapseHeightButton 0.3s ease-out forwards;
+}
+
+.custom-button:hover,
+.custom-button:focus {
+	box-shadow: 0 2px 6px rgb(102, 233, 168, 0.85);
+}
+
+.button-cancel {
+	box-shadow:
+		0 1px 3px rgb(242, 41, 81, 0.85),
+		0 1px 4px rgb(242, 41, 81, 0.85);
+	transition: box-shadow 0.3s ease-in-out;
+	color: black;
+	background-color: white;
+	border-color: transparent;
+}
+
+.button-cancel:hover,
+.button-cancel:focus {
+	box-shadow: 0 2px 6px rgb(221, 62, 126, 0.85);
+}
+
+.button-finish:hover,
+.button-finish:focus {
+	box-shadow: 0 2px 6px rgba(93, 133, 189, 0.85) !important;
+}
+
+.button-upload {
+	color: black;
+	border-color: transparent;
+}
+
+/* Fade-out animation for elements */
+.fade-out {
+	animation: fadeOutAnimation 500ms forwards;
+}
+
+/* New animation for modal disappearing */
+.fade-scale-out {
+	animation: scaleFadeOut 0.25s ease-out forwards;
+}
+
+@keyframes fadeOutAnimation {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+/* Fade-in animation for backdrop */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Scale and fade-in animation for modal */
+@keyframes scaleFadeIn {
+	from {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* Scale and fade-out animation */
+@keyframes scaleFadeOut {
+	from {
+		opacity: 1;
+		transform: scale(1);
+	}
+	to {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+}
+
+.collapsed {
+	z-index: 50;
+	display: block;
+	animation: collapseHeight 0.5s ease-out forwards;
+}
+
+.collapsed-reverse {
+	animation: footerAppears 0.4s ease-out forwards;
+}
+
+@keyframes footerAppears {
+	from {
+		transform: translateY(-10px);
+		padding-bottom: 0px;
+	}
+	to {
+		padding-bottom: 25px;
+		transform: translateY(0px);
+	}
+}
+
+@keyframes collapseHeight {
+	from {
+	}
+	to {
+		padding-bottom: 0px;
+		padding-top: 0px;
+		transform: translateY(-10px);
+	}
+}
+
+@keyframes collapseHeightButton {
+	from {
+	}
+	to {
+		opacity: 0.2;
+		box-shadow: none;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.file-wrapper {
+		width: 100%;
+	}
+
+	.slds-modal__footer {
+		outline: none !important;
+		border-top: none !important;
+		transform: translateY(-5px) !important;
+		z-index: -5 !important;
+	}
+}

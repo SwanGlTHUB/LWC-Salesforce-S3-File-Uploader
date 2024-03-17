@@ -1,0 +1,146 @@
+body {
+	font-family: sans-serif;
+}
+
+.file-container {
+	background-color: #f5f8fe;
+
+	box-shadow:
+		0 1px 3px rgba(0, 0, 0, 0.12),
+		0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: box-shadow 0.3s ease-in-out;
+
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	border-radius: 8px;
+
+	padding-left: 16px;
+	padding-right: 16px;
+
+	z-index: 100;
+}
+
+.file-expander-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	z-index: 50;
+	animation: expandHeight 0.3s ease-out forwards;
+
+	transform: translateY(-5px);
+}
+
+.file-expander {
+	width: 90%;
+	height: 100%;
+	background-color: #fff7df;
+	box-shadow:
+		0 1px 3px rgba(0, 0, 0, 0.12),
+		0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.transparent-textarea {
+	resize: none;
+	outline: none;
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.5); /* Adjust transparency here */
+	border: 1px solid #ccc;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	padding-bottom: 15px;
+	font-size: 16px;
+	color: #333; /* Text color */
+}
+
+@keyframes expandHeight {
+	from {
+		height: 0;
+		opacity: 0;
+	}
+	to {
+		height: 140px; /* Adjust based on content or set to 100% if parent's height is defined */
+		opacity: 1;
+	}
+}
+
+.collapsed {
+	animation: collapseHeight 0.3s ease-out forwards;
+}
+
+@keyframes collapseHeight {
+	from {
+		height: 140px; /* Adjust to match the expanded height or 100% */
+		opacity: 1;
+	}
+	to {
+		height: 0;
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+/* Apply the animation to elements with the class 'buttons-collapsed' */
+.buttons-collapsed {
+	animation-name: fadeOut; /* Name of the animation */
+	animation-duration: 200ms; /* Duration of the animation */
+	animation-fill-mode: forwards; /* Keeps the element in the final state after the animation completes */
+}
+
+.action-buttons-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.progress-bar {
+	display: none;
+	height: 36px;
+}
+
+.file-container:hover {
+	box-shadow:
+		0 7px 14px rgba(0, 0, 0, 0.25),
+		0 5px 5px rgba(0, 0, 0, 0.22);
+}
+
+.file-information {
+	display: flex;
+}
+
+.file-photo-container {
+	padding-right: 16px;
+}
+
+.file-info-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+
+	font-family: sans-serif;
+}
+
+.trash-icon {
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.note-icon {
+	cursor: pointer;
+}

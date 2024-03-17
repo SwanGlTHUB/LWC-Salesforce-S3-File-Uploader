@@ -1,0 +1,63 @@
+<template>
+	<template if:true={isOpen}>
+		<section
+			role="dialog"
+			tabindex="-1"
+			aria-modal="true"
+			class="slds-modal slds-fade-in-open"
+		>
+			<div class="slds-modal__container">
+				<div
+					class="slds-modal__content slds-p-around_medium modal-content"
+				>
+					<p class="modal-title">{labels.amazonFiles}</p>
+					<lightning-layout
+						class="slds-grid slds-wrap files-container"
+						if:true={filesLength}
+						multiple
+					>
+						<template for:each={filesToUpload} for:item="file">
+							<lightning-layout-item
+								class="slds-col file-wrapper"
+								data-key={file.id}
+								key={file.id}
+								size="6"
+							>
+								<c-swan-_-amazon-file-uploader-modal-file
+									file={file}
+									class="file-element-container"
+									onremove={handleRemove}
+									onuploadfailure={handleUploadFailure}
+									onuploadsuccess={handleUploadSuccess}
+								></c-swan-_-amazon-file-uploader-modal-file>
+							</lightning-layout-item>
+						</template>
+					</lightning-layout>
+				</div>
+				<footer class="slds-modal__footer">
+					<button
+						class="custom-button button-cancel slds-var-m-right_x-small"
+						onclick={handleCancel}
+						disabled={isActionButtonsDisabled}
+					>
+						{labels.cancel}
+					</button>
+					<button
+						class="custom-button button-upload slds-var-m-right_x-small"
+						onclick={handleUpload}
+						disabled={isActionButtonsDisabled}
+					>
+						{labels.upload}
+					</button>
+					<button
+						class="custom-button slds-var-m-right_x-small slds-hide button-finish"
+						onclick={handleFinish}
+					>
+						{labels.finish}
+					</button>
+				</footer>
+			</div>
+		</section>
+		<div class="slds-backdrop slds-backdrop_open"></div>
+	</template>
+</template>

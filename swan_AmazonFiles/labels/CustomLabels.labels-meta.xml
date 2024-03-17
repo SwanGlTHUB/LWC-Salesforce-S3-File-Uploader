@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>swan_UnexpectedError</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Unexpected Error</shortDescription>
+        <value>Unexpected Error. Please contact System Administrator</value>
+    </labels>
+    <labels>
+        <fullName>swan_AccessDenied</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>swan_AccessDenied</shortDescription>
+        <value>Access Denied</value>
+    </labels>
+    <labels>
+        <fullName>swan_AmazonFiles</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>swan_AmazonFiles</shortDescription>
+        <value>Amazon Files</value>
+    </labels>
+    <labels>
+        <fullName>swan_Cancel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>swan_Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>swan_DragAndDropYourFiles</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>swan_DragAndDropYourFiles</shortDescription>
+        <value>Drag &amp; Drop your files here</value>
+    </labels>
+    <labels>
+        <fullName>swan_Finish</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>swan_Finish</shortDescription>
+        <value>Finish</value>
+    </labels>
+    <labels>
+        <fullName>swan_Name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>swan_Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>swan_Note</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>swan_Note</shortDescription>
+        <value>Note</value>
+    </labels>
+    <labels>
+        <fullName>swan_NoFiles</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>swan_NoFiles</shortDescription>
+        <value>No Files</value>
+    </labels>
+    <labels>
+        <fullName>swan_TypeSomething</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>swan_TypeSomething</shortDescription>
+        <value>Type something...</value>
+    </labels>
+    <labels>
+        <fullName>swan_Upload</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>swan_Upload</shortDescription>
+        <value>Upload</value>
+    </labels>
+    <labels>
+        <fullName>swan_UploadedBy</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>swan_UploadedBy</shortDescription>
+        <value>Uploaded By</value>
+    </labels>
+    <labels>
+        <fullName>swan_Uploading</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>swan_Uploading</shortDescription>
+        <value>Uploading...</value>
+    </labels>
+    <labels>
+        <fullName>swan_AccessDeniedNeedEditPermission</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>swan_AccessDeniedNeedEditPermission</shortDescription>
+        <value>Access Denied. You need Amazon Files Edit Access</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,24 @@
+.column-wrapper {
+	width: 25%;
+}
+
+.size-3 {
+	width: 32%;
+}
+
+.size-12 {
+	width: 100%;
+}
+
+.size-large {
+	width: 18%;
+}
+
+.columns-wrapper {
+	justify-content: space-between;
+	max-height: 400px;
+	overflow: none;
+
+	padding-left: 15px;
+	padding-right: 15px;
+}

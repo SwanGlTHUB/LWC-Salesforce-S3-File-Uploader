@@ -1,0 +1,53 @@
+<template>
+	<lightning-layout size="6" multiple-rows>
+		<lightning-layout-item
+			class="file-container"
+			style={fileContainerStyle}
+			size="12"
+		>
+			<div class="file-information">
+				<div class="file-photo-container">
+					<img src={fileIcon} />
+				</div>
+				<div class="file-info-container">
+					<div>{fileName}</div>
+					<div>{fileSize}</div>
+				</div>
+			</div>
+			<div class="action-buttons-container">
+				<c-swan-_-progress-bar
+					class="progress-bar"
+				></c-swan-_-progress-bar>
+				<div class="action-buttons-wrapper">
+					<img
+						class="note-icon"
+						src={icons.noteIcon}
+						onclick={handleExpander}
+					/>
+					<img
+						class="trash-icon"
+						src={icons.trashIcon}
+						onclick={handleRemove}
+					/>
+				</div>
+			</div>
+		</lightning-layout-item>
+		<lightning-layout-item
+			class="file-expander-container"
+			style={expanderContainerStyle}
+			size="12"
+			if:true={isExpanded}
+		>
+			<lightning-layout-item class="file-expander">
+				<textarea
+					class="transparent-textarea"
+					placeholder={labels.typeSomething}
+					oninput={handleNoteEdit}
+					maxlength="250"
+				>
+                    {fileNote}
+                </textarea>
+			</lightning-layout-item>
+		</lightning-layout-item>
+	</lightning-layout>
+</template>

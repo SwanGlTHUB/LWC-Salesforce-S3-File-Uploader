@@ -1,0 +1,224 @@
+body {
+	font-family: sans-serif;
+}
+
+.file-container {
+	background-color: #f5f8fe;
+
+	box-shadow:
+		0 1px 3px rgba(0, 0, 0, 0.12),
+		0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: box-shadow 0.3s ease-in-out;
+
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	border-radius: 8px;
+
+	padding-left: 16px;
+	padding-right: 16px;
+
+	z-index: 90;
+
+	height: 70px;
+}
+
+.file-expander-button-container {
+	width: 95%;
+	height: 18px !important;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+
+	z-index: 25;
+
+	transform: translateY(-5px);
+}
+
+.cursor-wait {
+	cursor: wait !important;
+	opacity: 0.5;
+}
+
+.file-expander-button {
+	cursor: pointer;
+	width: 25px;
+	height: 100%;
+	margin-right: 10px;
+	background-color: #ffeebe;
+	box-shadow:
+		0 1px 3px rgba(0, 0, 0, 0.12),
+		0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.file-expander-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	z-index: 50;
+}
+
+.file-expander {
+	width: 90%;
+	height: fit-content;
+	background-color: #fffbef;
+	box-shadow:
+		0 1px 3px rgba(0, 0, 0, 0.12),
+		0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.file-description {
+	font-family: sans-serif;
+	overflow: hidden;
+	animation: expandHeight 1s ease-out forwards;
+
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.transparent-textarea {
+	resize: none;
+	outline: none;
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.5); /* Adjust transparency here */
+	border: 1px solid #ccc;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	padding-bottom: 15px;
+	font-size: 16px;
+	color: #333; /* Text color */
+}
+
+.file-name {
+	font-size: 14px;
+}
+
+@keyframes expandHeight {
+	from {
+		max-height: 0px;
+		height: 0px;
+		opacity: 1;
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+
+	40% {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	to {
+		height: 100%; /* Adjust based on content or set to 100% if parent's height is defined */
+		opacity: 1;
+		max-height: 300px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+.collapsed {
+	animation: collapseHeight 0.3s ease-out forwards;
+}
+
+@keyframes collapseHeight {
+	from {
+		height: 100%;
+		opacity: 1;
+		max-height: 300px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	60% {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+
+	to {
+		max-height: 0px;
+		height: 0px;
+		opacity: 1;
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+/* Apply the animation to elements with the class 'buttons-collapsed' */
+.buttons-collapsed {
+	animation-name: fadeOut; /* Name of the animation */
+	animation-duration: 200ms; /* Duration of the animation */
+	animation-fill-mode: forwards; /* Keeps the element in the final state after the animation completes */
+}
+
+.action-buttons-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.progress-bar {
+	display: none;
+	height: 36px;
+}
+
+.file-container:hover {
+	box-shadow:
+		0 7px 14px rgba(0, 0, 0, 0.25),
+		0 5px 5px rgba(0, 0, 0, 0.22);
+	cursor: pointer;
+}
+
+.file-information {
+	display: flex;
+}
+
+.file-photo-container {
+	padding-right: 16px;
+}
+
+.file-info-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+
+	font-family: sans-serif;
+}
+
+.action-buttons-container {
+	border-radius: 20px;
+	padding: 5px;
+}
+
+.trash-icon {
+	height: 28px;
+}
+
+.action-buttons-container:hover {
+	transition: 0.3s;
+	cursor: pointer;
+	background-color: #f4aeae45;
+}
+
+.disabled {
+	cursor: wait;
+	opacity: 0.5;
+}
+
+.note-icon {
+	cursor: pointer;
+}

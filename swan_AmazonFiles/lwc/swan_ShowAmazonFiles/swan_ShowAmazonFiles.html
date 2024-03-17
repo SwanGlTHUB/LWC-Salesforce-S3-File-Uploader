@@ -1,0 +1,31 @@
+<template>
+	<template lwc:if={isSizeSmall}>
+		<lightning-layout class="slds-grid slds-wrap columns-wrapper" size="12">
+			<lightning-layout-item class="column-wrapper size-12" size="12">
+				<c-swan-_-amazon-files-column
+					filestoshow={columns.first}
+				></c-swan-_-amazon-files-column>
+			</lightning-layout-item>
+		</lightning-layout>
+	</template>
+
+	<template lwc:if={isSizeMedium}>
+		<lightning-layout class="slds-grid slds-wrap columns-wrapper" size="12">
+			<lightning-layout-item class="column-wrapper size-3" size="4">
+				<c-swan-_-amazon-files-column
+					filestoshow={columns.first}
+				></c-swan-_-amazon-files-column>
+			</lightning-layout-item>
+			<lightning-layout-item class="column-wrapper size-3" size="4">
+				<c-swan-_-amazon-files-column
+					filestoshow={columns.second}
+				></c-swan-_-amazon-files-column>
+			</lightning-layout-item>
+			<lightning-layout-item class="column-wrapper size-3" size="4">
+				<c-swan-_-amazon-files-column
+					filestoshow={columns.third}
+				></c-swan-_-amazon-files-column>
+			</lightning-layout-item>
+		</lightning-layout>
+	</template>
+</template>

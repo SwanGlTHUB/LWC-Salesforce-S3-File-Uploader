@@ -1,0 +1,11 @@
+<template>
+	<div class="column-wrapper">
+		<template for:each={filestoshow} for:item="file">
+			<c-swan-_-amazon-file-card
+				class="file-card"
+				key={file.Id}
+				file={file}
+			></c-swan-_-amazon-file-card>
+		</template>
+	</div>
+</template>

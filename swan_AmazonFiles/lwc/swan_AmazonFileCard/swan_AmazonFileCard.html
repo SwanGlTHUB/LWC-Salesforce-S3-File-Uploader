@@ -1,0 +1,51 @@
+<template>
+	<lightning-layout class="card-wrapper" size="6" multiple-rows disabled>
+		<lightning-layout-item
+			class="file-container"
+			size="12"
+			onclick={handleFileView}
+		>
+			<div class="file-information">
+				<div class="file-photo-container">
+					<img src={fileIcon} />
+				</div>
+				<div class="file-info-container">
+					<div class="file-name">{fileName}</div>
+					<div>{fileSize}</div>
+				</div>
+			</div>
+			<div class="action-buttons-container" onclick={handleDelete}>
+				<div class="action-buttons-wrapper" if:true={isEditPermission}>
+					<img class="trash-icon" src={icons.trashIcon} />
+				</div>
+			</div>
+		</lightning-layout-item>
+		<lightning-layout-item
+			class="file-expander-container"
+			size="12"
+			if:true={isExpanded}
+		>
+			<lightning-layout-item class="file-expander">
+				<div class="file-description">
+					<b>{labels.name}</b><br />
+					{file.FileName__c}<br /><br />
+
+					<span if:true={fileHasNote}>
+						<b>{labels.note}</b><br />
+						{file.Note__c}<br /><br />
+					</span>
+
+					<b>{labels.uploadedBy}</b><br />
+					{file.UploadedByName__c}
+				</div>
+			</lightning-layout-item>
+		</lightning-layout-item>
+		<lightning-layout-item class="file-expander-button-container" size="12">
+			<lightning-layout-item
+				class="file-expander-button"
+				onclick={handleExpander}
+			>
+			</lightning-layout-item>
+		</lightning-layout-item>
+	</lightning-layout>
+</template>
