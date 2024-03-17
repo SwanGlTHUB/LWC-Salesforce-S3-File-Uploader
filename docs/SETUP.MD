@@ -98,6 +98,9 @@ In this guide, we use `https://creative-wolf-4dpoz7-dev-ed.lightning.force.com` 
     ]
 }
 ```
+
+&nbsp;
+
 ## Salesforce Setup
 
 ### Step 1: Setup Named Credentials
