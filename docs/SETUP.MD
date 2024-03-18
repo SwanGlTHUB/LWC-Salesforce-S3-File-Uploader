@@ -19,7 +19,7 @@ You will need an S3 bucket for storing Salesforce files. Follow these steps to c
 [
     {
         "AllowedHeaders": ["*"],
-        "AllowedMethods": ["GET", "PUT", "DELETE", "HEAD"],
+        "AllowedMethods": ["POST", "GET", "PUT", "DELETE", "HEAD"],
         "AllowedOrigins": [
             "https://creative-wolf-4dpoz7-dev-ed.lightning.force.com",
             "https://creative-wolf-4dpoz7-dev-ed.my.site.com"
