@@ -13,4 +13,6 @@ Component's controller leverages Amazon STS to obtain a session token, ensuring 
 
 ## Demo
 
-https://github.com/SwanGlTHUB/LWC-Salesforce-S3-File-Uploader/blob/master/docs/Large%20FIle%20upload.mp4
+[![Now in Android: 55]          // Title
+(https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg)] // Thumbnail
+(https://github.com/SwanGlTHUB/LWC-Salesforce-S3-File-Uploader/blob/master/docs/Large%20FIle%20upload.mp4)    // Video Link
